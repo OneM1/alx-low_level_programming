@@ -2,18 +2,28 @@
 /**
  * _strchr - get the length of a prefix substring
  * @s: input
- * @c: input
+ * @accept: input
  * Return: Always 0 (Success)
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	unsigned int n = 0;
+	int r;
 
-	for (; s[i] >= '\0'; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
+			{
+				n++;
+				break;
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
+		s++;
 	}
-	return (0);
+	return (n);
 }
 
