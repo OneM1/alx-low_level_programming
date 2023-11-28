@@ -12,8 +12,8 @@
  * @fd: The file descriptor to close.
  * @filename: The name of the file associated with the file descriptor.
  *
- * Description: Attempts to close a file descriptor. If an error occurs, an
- * error message is printed and the program exits with code 100.
+ * Description: Attempts to close a file.If an error occurs
+ * error message program exits with code 100.
  */
 void close_file(int fd, char *filename) {
     if (close(fd) < 0) {
@@ -26,13 +26,7 @@ void close_file(int fd, char *filename) {
  * main - Copies the content of one file to another.
  * @argc: Argument count.
  * @argv: contains the names of the source and destination files.
- *
- * Description: Copies the contents from 'file_from' to 'file_to'. If 'file_to' already exists, it is truncated.
- * Exits with different status codes depending on the type of error encountered (if any).
- * Usage: cp file_from file_to
- * The program exits with code 97 if the number of arguments is incorrect, with code 98 if the source file
- * cannot be read, with code 99 if the destination file cannot be written to, and with code 100 if file descriptors
- * cannot be closed.
+ * Description: Copies the contents from 'file_from' to 'file_to'.
  *
  * Return: 0 on success, or the relevant exit code on failure.
  */
