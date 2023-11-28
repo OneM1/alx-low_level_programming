@@ -4,11 +4,10 @@
 #include "main.h"
 
 /**
- *read_textfile - Reads a text file&prints it to the POSIX standard output.
+ *read_textfile - Reads a text file&prints it to  POSIX.
  * @filename: Pointer to the name of the file.
  * @letters: Number of letters to read and print.
  *
- * Description: Opens, reads, and prints a given number of letters from a file.
  * Returns 0 on failure or if the file cannot be opened.
  * Return: Number of letters it could read and print.
  */
