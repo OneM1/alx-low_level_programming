@@ -9,8 +9,9 @@
  * @filename: Name of the file to create.
  * @text_content: Text to write into the file.
  * Description: This function creates a file with the specified name and writes
+ *
  * the provided text into it
- * returns -1 on failure and 1 on success.
+ * return:-1 on failure and 1 on success.
  **/
 int create_file(const char *filename, char *text_content)
 {
